@@ -1,40 +1,38 @@
-# 内容包模板
+# 内容总包
 
-## 选题信息
+## 基本信息
 
-- 日期：{{date}}
-- 主题：{{topic}}
-- 栏目：{{column}}
-- 目标人群：{{audience}}
-- 视频时长：{{duration}}
+- 品牌名：$brand_name
+- 账号定位：$account_positioning
+- 日期：$date
+- Slug：$slug
+- 栏目：$column
+- 目标平台：$platform
+- 视频时长：$duration
+- 视觉风格：$visual_style
 
-## 一句话观点
+## 核心观点
 
-{{one_sentence_viewpoint}}
+$core_viewpoint
 
-## 用户洞察
+## 原始输入
 
-{{user_insight}}
+$viewpoint_text
 
-## 核心脚本方向
+## 内容判断
 
-- 开头钩子：{{hook}}
-- 中段展开：{{body}}
-- 结尾转化：{{ending}}
+这条内容需要把行业语言翻译成用户能感知的体验语言。不要只解释参数，而要讲清楚：这个产品判断为什么和用户的安心感、舒适感、信任感有关。
 
-## 交付文件
+## 建议结构
 
-- `voiceover_30s.md`
-- `voiceover_60s.md`
-- `storyboard.md`
-- `image_prompts.md`
-- `cover_copy.md`
-- `publish_copy.md`
+1. 开头：用一个反差判断切入。
+2. 中段：解释行业说法和用户感受之间的差异。
+3. 后段：落到设计策略或产品表达方法。
+4. 结尾：给出「初一」式的清晰判断。
 
-## 审核清单
+## 待人工确认
 
-- [ ] 观点清晰
-- [ ] 用户场景明确
-- [ ] 无夸大功效
-- [ ] 适合短视频表达
-- [ ] 可直接进入拍摄或生成素材
+- [ ] 观点是否足够明确
+- [ ] 开头是否适合短视频
+- [ ] 是否避免参数堆叠
+- [ ] 是否符合「专业、清晰、有判断，但不端着」
