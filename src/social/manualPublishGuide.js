@@ -1,4 +1,4 @@
-function splitCaption(caption = "") {
+export function splitCaption(caption = "") {
   const lines = caption.trim().split(/\r?\n/).filter(Boolean);
   const titleLine = lines[0] || "";
   const bodyLines = lines.slice(1).filter((line) => !/^#[\p{L}\p{N}_-]+(?:\s+#[\p{L}\p{N}_-]+)*$/u.test(line.trim()));
@@ -10,7 +10,7 @@ function splitCaption(caption = "") {
   };
 }
 
-function createManualPublishGuide({ topic, contentPackage, imageAssets }) {
+export function createManualPublishGuide({ topic, contentPackage, imageAssets }) {
   const xhs = splitCaption(contentPackage.captions?.xiaohongshu || "");
   const douyin = splitCaption(contentPackage.captions?.douyin || "");
   return {
@@ -43,7 +43,7 @@ function createManualPublishGuide({ topic, contentPackage, imageAssets }) {
   };
 }
 
-function createAnalyticsSnapshotTemplate(topic) {
+export function createAnalyticsSnapshotTemplate(topic) {
   return {
     topic,
     created_at: new Date().toISOString(),
@@ -62,9 +62,3 @@ function createAnalyticsSnapshotTemplate(topic) {
     next_optimization_notes: "发布后根据回填数据补充。",
   };
 }
-
-module.exports = {
-  createAnalyticsSnapshotTemplate,
-  createManualPublishGuide,
-  splitCaption,
-};

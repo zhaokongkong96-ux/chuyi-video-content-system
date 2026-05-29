@@ -1,9 +1,9 @@
-const fs = require("node:fs/promises");
-const path = require("node:path");
+import fs from "node:fs/promises";
+import path from "node:path";
 
 const DEFAULT_CONTENT_ROOT = "/content";
 
-function isPublicHttpUrl(value) {
+export function isPublicHttpUrl(value) {
   if (!value) return false;
   try {
     const parsed = new URL(value);
@@ -13,7 +13,7 @@ function isPublicHttpUrl(value) {
   }
 }
 
-function normalizePageScript(raw) {
+export function normalizePageScript(raw) {
   if (Array.isArray(raw)) {
     return raw;
   }
@@ -26,7 +26,7 @@ function normalizePageScript(raw) {
   return raw;
 }
 
-class FilesystemContentStorage {
+export class FilesystemContentStorage {
   constructor(options = {}) {
     this.mode = "filesystem";
     this.contentRoot = options.contentRoot || process.env.CONTENT_ROOT || DEFAULT_CONTENT_ROOT;
@@ -129,10 +129,10 @@ class FilesystemContentStorage {
   }
 }
 
-const COMPLETE_MOCK_TOPIC = "cloud-ready-demo";
-const INCOMPLETE_MOCK_TOPIC = "incomplete-demo";
+export const COMPLETE_MOCK_TOPIC = "cloud-ready-demo";
+export const INCOMPLETE_MOCK_TOPIC = "incomplete-demo";
 
-function createMockContentPackage(topic = COMPLETE_MOCK_TOPIC) {
+export function createMockContentPackage(topic = COMPLETE_MOCK_TOPIC) {
   const pages = [
     { page_number: 1, page_title: "封面页" },
     { page_number: 2, page_title: "问题引入" },
@@ -154,7 +154,7 @@ function createMockContentPackage(topic = COMPLETE_MOCK_TOPIC) {
   };
 }
 
-class MockCloudContentStorage {
+export class MockCloudContentStorage {
   constructor(options = {}) {
     this.mode = "cloud";
     this.packages = new Map(Object.entries(options.packages || {
@@ -203,7 +203,7 @@ class MockCloudContentStorage {
   }
 }
 
-function createContentStorage(options = {}) {
+export function createContentStorage(options = {}) {
   const mode = options.mode || process.env.CONTENT_STORAGE_MODE || "cloud";
   if (mode === "filesystem") {
     return new FilesystemContentStorage(options);
@@ -213,14 +213,3 @@ function createContentStorage(options = {}) {
   }
   throw new Error(`Unsupported CONTENT_STORAGE_MODE: ${mode}`);
 }
-
-module.exports = {
-  COMPLETE_MOCK_TOPIC,
-  FilesystemContentStorage,
-  INCOMPLETE_MOCK_TOPIC,
-  MockCloudContentStorage,
-  createContentStorage,
-  createMockContentPackage,
-  isPublicHttpUrl,
-  normalizePageScript,
-};

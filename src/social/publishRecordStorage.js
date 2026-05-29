@@ -1,4 +1,4 @@
-class MockPublishRecordStorage {
+export class MockPublishRecordStorage {
   constructor() {
     this.records = new Map();
   }
@@ -42,11 +42,6 @@ class MockPublishRecordStorage {
   }
 }
 
-function createPublishRecordStorage() {
+export function createPublishRecordStorage() {
   return new MockPublishRecordStorage();
 }
-
-module.exports = {
-  MockPublishRecordStorage,
-  createPublishRecordStorage,
-};
