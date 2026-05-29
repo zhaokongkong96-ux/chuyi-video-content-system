@@ -84,3 +84,9 @@
 - 再次确认 `package.json` 包含 `dev`、`build`、`start`、`test` scripts，且不包含 `type: commonjs`。
 - 再次确认 `src/app/layout.tsx`、`src/app/page.tsx`、`src/app/api/social/config/check/route.ts` 存在。
 - 再次确认 `src/app/api/**/route.ts` 和 `src/social/*.js` 未使用 CommonJS 写法。
+
+## 2026-05-29 social module import verification
+
+- 新增模块导入静态测试，防止 `src/app/api/**/route.ts` 从 `src/social/*.js` 使用 default import。
+- 测试同时验证 route handler 不使用 `require`、`module.exports` 或 `exports.*`，并保留 `export async function GET/POST` 写法。
+- 测试验证 `src/social/*.js` 继续使用 named ESM export，避免 Vercel/Turbopack 再次出现 default export 不存在的构建错误。
