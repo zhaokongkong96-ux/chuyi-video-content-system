@@ -90,3 +90,15 @@
 - 新增模块导入静态测试，防止 `src/app/api/**/route.ts` 从 `src/social/*.js` 使用 default import。
 - 测试同时验证 route handler 不使用 `require`、`module.exports` 或 `exports.*`，并保留 `export async function GET/POST` 写法。
 - 测试验证 `src/social/*.js` 继续使用 named ESM export，避免 Vercel/Turbopack 再次出现 default export 不存在的构建错误。
+
+## 2026-05-29 legacy root app import guard
+
+- 扩展模块导入静态测试，覆盖旧路径 `app/api/social/**/route.js`，防止旧 root app route 在冲突解决后重新出现并使用 default import。
+- 针对 Vercel 报错中的 `app/api/social/publish/execute/route.js` 增加专项断言：如该文件存在，必须使用 `import { getOAuthRedirectUris } ...` 与 `import { executePublish } ...`，且不能再通过 `const { ... } = oauthConfig/publishExecute` 解构 default import。
+- 当前仓库 canonical route 位于 `src/app/api/social/publish/execute/route.ts`，已经使用 named import。
+
+## 2026-05-29 route tree unification verification
+
+- 检查项目不存在旧的根目录 `app/api/social/**` 路由。
+- 确认当前唯一 App Router 路由树位于 `src/app/**`。
+- 确认保留 `src/app/layout.tsx`、`src/app/page.tsx` 和所有 `src/app/api/social/**/route.ts`，避免 Vercel 构建到旧的 `route.js`。
