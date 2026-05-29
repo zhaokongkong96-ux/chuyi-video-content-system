@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "mode": "manual",
+  "topic": "demand-priority",
+  "title": "需求优先级怎么判断",
+  "page_count": 6,
+  "output_dir": "/workspace/chuyi-video-content-system/output/2026-05-29_demand-priority",
+  "files": [
+    "page_script.json",
+    "xiaohongshu_caption.md",
+    "douyin_caption.md",
+    "manual_publish_guide.md",
+    "analytics_snapshot.json",
+    "publish_record.json",
+    "preview.html",
+    "images/page_01.svg ...",
+    "image_prompts/page_01_prompt.txt ..."
+  ]
+}

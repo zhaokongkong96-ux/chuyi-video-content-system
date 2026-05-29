@@ -1,0 +1,20 @@
+{
+  "topic": "demand-priority",
+  "title": "需求优先级怎么判断",
+  "mode": "manual",
+  "status": "manual_publish_ready",
+  "image_count": 6,
+  "created_at": "2026-05-29T13:12:29.316Z",
+  "platforms": {
+    "xiaohongshu": {
+      "status": "pending_manual_publish",
+      "publish_url": "",
+      "published_at": ""
+    },
+    "douyin": {
+      "status": "pending_manual_publish",
+      "publish_url": "",
+      "published_at": ""
+    }
+  }
+}
