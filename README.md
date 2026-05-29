@@ -152,6 +152,12 @@ python scripts/generate_graphic_content_package.py --date 2026-05-29 --slug dema
 NEXT_PUBLIC_APP_URL=https://chuyi-video-content-system.vercel.app
 DOUYIN_REDIRECT_URI=https://chuyi-video-content-system.vercel.app/api/social/douyin/callback
 XHS_REDIRECT_URI=https://chuyi-video-content-system.vercel.app/api/social/xiaohongshu/callback
+### 云端环境变量
+
+```bash
+NEXT_PUBLIC_APP_URL=https://<YOUR_CLOUD_DOMAIN>
+DOUYIN_REDIRECT_URI=https://<YOUR_CLOUD_DOMAIN>/api/social/douyin/callback
+XHS_REDIRECT_URI=https://<YOUR_CLOUD_DOMAIN>/api/social/xiaohongshu/callback
 CONTENT_STORAGE_MODE=cloud
 SOCIAL_PUBLISH_API_ENABLED=false
 ```
@@ -160,6 +166,7 @@ SOCIAL_PUBLISH_API_ENABLED=false
 
 - `NEXT_PUBLIC_APP_URL`：云端公开访问域名，不能是 `localhost`、`127.0.0.1` 或 `[::1]`。
 - 当前 Vercel 真实公网域名是 `https://chuyi-video-content-system.vercel.app`；如果未来更换项目或自定义域名，需要同步更新这里的三个 URL。
+- `<YOUR_CLOUD_DOMAIN>` 必须替换成当前云端项目的真实公网域名，例如 Vercel / Netlify / Railway / Render 提供的正式访问域名。
 - `DOUYIN_REDIRECT_URI`：本项目提供给抖音平台回调的 OAuth callback 接口地址，建议为 `${NEXT_PUBLIC_APP_URL}/api/social/douyin/callback`。
 - `XHS_REDIRECT_URI`：本项目提供给小红书平台回调的 OAuth callback 接口地址，建议为 `${NEXT_PUBLIC_APP_URL}/api/social/xiaohongshu/callback`。
 - `CONTENT_STORAGE_MODE`：`cloud` 为正式云端模式，当前提供 mock 实现；`filesystem` 仅用于开发 / 临时测试。
