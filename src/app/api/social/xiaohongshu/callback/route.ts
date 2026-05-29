@@ -1,6 +1,4 @@
-import oauthConfig from '../../../../../social/oauthConfig.js';
-
-const { getOAuthRedirectUris } = oauthConfig;
+import { getOAuthRedirectUris } from '../../../../../social/oauthConfig.js';
 
 export async function GET(request: Request) {
   try {

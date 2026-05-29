@@ -48,3 +48,10 @@
 - 将 `next`、`react`、`react-dom` 依赖版本改为 `latest`，确保 Vercel 能从仓库根目录的 `package.json` 检测 Next.js 版本。
 - 将 `src/app` 路由文件改为 Next.js / TypeScript 常用结构：`layout.tsx`、`page.tsx`、`route.ts`。
 - 新增 `tsconfig.json` 和 `next-env.d.ts`，让 Vercel/Next.js 构建 TypeScript App Router 路由时有明确配置。
+
+## 2026-05-29 ESM module format fix
+
+- 将 `package.json` 的模块类型从 CommonJS 调整为 ESM，避免 Next.js App Router `route.ts` 与包级 CommonJS 类型冲突。
+- 将 `src/social/*` 从 `require` / `module.exports` 改为 `import` / `export`。
+- 将 `src/app/api/social/**/route.ts` 改为直接使用命名 ESM import。
+- 将 Node 测试改为 ESM import，保持测试与运行时代码模块格式一致。

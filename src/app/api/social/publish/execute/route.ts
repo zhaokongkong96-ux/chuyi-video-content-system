@@ -1,8 +1,5 @@
-import oauthConfig from '../../../../../social/oauthConfig.js';
-import publishExecute from '../../../../../social/publishExecute.js';
-
-const { getOAuthRedirectUris } = oauthConfig;
-const { executePublish } = publishExecute;
+import { getOAuthRedirectUris } from '../../../../../social/oauthConfig.js';
+import { executePublish } from '../../../../../social/publishExecute.js';
 
 export async function POST(request: Request) {
   try {

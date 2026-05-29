@@ -1,6 +1,6 @@
 const LOCALHOST_PATTERNS = [/localhost/i, /127\.0\.0\.1/, /\[::1\]/];
 
-function hasLocalhost(value) {
+export function hasLocalhost(value) {
   return LOCALHOST_PATTERNS.some((pattern) => pattern.test(value || ""));
 }
 
@@ -8,7 +8,7 @@ function trimTrailingSlash(value) {
   return value.replace(/\/+$/, "");
 }
 
-function assertPublicUrl(name, value) {
+export function assertPublicUrl(name, value) {
   if (!value) {
     throw new Error(`${name} is required for cloud deployment.`);
   }
@@ -31,20 +31,20 @@ function assertPublicUrl(name, value) {
   return parsed;
 }
 
-function getCloudAppUrl(env = process.env) {
+export function getCloudAppUrl(env = process.env) {
   const appUrl = env.NEXT_PUBLIC_APP_URL;
   assertPublicUrl("NEXT_PUBLIC_APP_URL", appUrl);
   return trimTrailingSlash(appUrl);
 }
 
-function buildDefaultRedirectUris(appUrl) {
+export function buildDefaultRedirectUris(appUrl) {
   return {
     douyin: `${appUrl}/api/social/douyin/callback`,
     xiaohongshu: `${appUrl}/api/social/xiaohongshu/callback`,
   };
 }
 
-function getOAuthRedirectUris(env = process.env) {
+export function getOAuthRedirectUris(env = process.env) {
   const appUrl = getCloudAppUrl(env);
   const defaults = buildDefaultRedirectUris(appUrl);
   const redirectUris = {
@@ -60,11 +60,3 @@ function getOAuthRedirectUris(env = process.env) {
     redirectUris,
   };
 }
-
-module.exports = {
-  assertPublicUrl,
-  buildDefaultRedirectUris,
-  getCloudAppUrl,
-  getOAuthRedirectUris,
-  hasLocalhost,
-};
