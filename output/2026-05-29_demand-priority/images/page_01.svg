@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1086" height="1448" viewBox="0 0 1086 1448" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#071735"/>
+      <stop offset="58%" stop-color="#0B1F4D"/>
+      <stop offset="100%" stop-color="#1155E8"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="70%" cy="70%" r="60%">
+      <stop offset="0%" stop-color="#2F7DFF" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#2F7DFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1086" height="1448" fill="url(#bg)"/>
+  <circle cx="820" cy="930" r="480" fill="url(#glow)"/>
+
+  <g opacity="0.18">
+    <circle cx="70" cy="80" r="8" fill="#FFFFFF"/>
+<circle cx="104" cy="80" r="8" fill="#FFFFFF"/>
+<circle cx="138" cy="80" r="8" fill="#FFFFFF"/>
+<circle cx="172" cy="80" r="8" fill="#FFFFFF"/>
+<circle cx="206" cy="80" r="8" fill="#FFFFFF"/>
+<circle cx="240" cy="80" r="8" fill="#FFFFFF"/>
+<circle cx="274" cy="80" r="8" fill="#FFFFFF"/>
+<circle cx="308" cy="80" r="8" fill="#FFFFFF"/>
+<circle cx="342" cy="80" r="8" fill="#FFFFFF"/>
+<circle cx="70" cy="114" r="8" fill="#FFFFFF"/>
+<circle cx="104" cy="114" r="8" fill="#FFFFFF"/>
+<circle cx="138" cy="114" r="8" fill="#FFFFFF"/>
+<circle cx="172" cy="114" r="8" fill="#FFFFFF"/>
+<circle cx="206" cy="114" r="8" fill="#FFFFFF"/>
+<circle cx="240" cy="114" r="8" fill="#FFFFFF"/>
+<circle cx="274" cy="114" r="8" fill="#FFFFFF"/>
+<circle cx="308" cy="114" r="8" fill="#FFFFFF"/>
+<circle cx="342" cy="114" r="8" fill="#FFFFFF"/>
+<circle cx="70" cy="148" r="8" fill="#FFFFFF"/>
+<circle cx="104" cy="148" r="8" fill="#FFFFFF"/>
+<circle cx="138" cy="148" r="8" fill="#FFFFFF"/>
+<circle cx="172" cy="148" r="8" fill="#FFFFFF"/>
+<circle cx="206" cy="148" r="8" fill="#FFFFFF"/>
+<circle cx="240" cy="148" r="8" fill="#FFFFFF"/>
+<circle cx="274" cy="148" r="8" fill="#FFFFFF"/>
+<circle cx="308" cy="148" r="8" fill="#FFFFFF"/>
+<circle cx="342" cy="148" r="8" fill="#FFFFFF"/>
+<circle cx="70" cy="182" r="8" fill="#FFFFFF"/>
+<circle cx="104" cy="182" r="8" fill="#FFFFFF"/>
+<circle cx="138" cy="182" r="8" fill="#FFFFFF"/>
+<circle cx="172" cy="182" r="8" fill="#FFFFFF"/>
+<circle cx="206" cy="182" r="8" fill="#FFFFFF"/>
+<circle cx="240" cy="182" r="8" fill="#FFFFFF"/>
+<circle cx="274" cy="182" r="8" fill="#FFFFFF"/>
+<circle cx="308" cy="182" r="8" fill="#FFFFFF"/>
+<circle cx="342" cy="182" r="8" fill="#FFFFFF"/>
+<circle cx="70" cy="216" r="8" fill="#FFFFFF"/>
+<circle cx="104" cy="216" r="8" fill="#FFFFFF"/>
+<circle cx="138" cy="216" r="8" fill="#FFFFFF"/>
+<circle cx="172" cy="216" r="8" fill="#FFFFFF"/>
+<circle cx="206" cy="216" r="8" fill="#FFFFFF"/>
+<circle cx="240" cy="216" r="8" fill="#FFFFFF"/>
+<circle cx="274" cy="216" r="8" fill="#FFFFFF"/>
+<circle cx="308" cy="216" r="8" fill="#FFFFFF"/>
+<circle cx="342" cy="216" r="8" fill="#FFFFFF"/>
+<circle cx="70" cy="250" r="8" fill="#FFFFFF"/>
+<circle cx="104" cy="250" r="8" fill="#FFFFFF"/>
+<circle cx="138" cy="250" r="8" fill="#FFFFFF"/>
+<circle cx="172" cy="250" r="8" fill="#FFFFFF"/>
+<circle cx="206" cy="250" r="8" fill="#FFFFFF"/>
+<circle cx="240" cy="250" r="8" fill="#FFFFFF"/>
+<circle cx="274" cy="250" r="8" fill="#FFFFFF"/>
+<circle cx="308" cy="250" r="8" fill="#FFFFFF"/>
+<circle cx="342" cy="250" r="8" fill="#FFFFFF"/>
+<circle cx="70" cy="284" r="8" fill="#FFFFFF"/>
+<circle cx="104" cy="284" r="8" fill="#FFFFFF"/>
+<circle cx="138" cy="284" r="8" fill="#FFFFFF"/>
+<circle cx="172" cy="284" r="8" fill="#FFFFFF"/>
+<circle cx="206" cy="284" r="8" fill="#FFFFFF"/>
+<circle cx="240" cy="284" r="8" fill="#FFFFFF"/>
+<circle cx="274" cy="284" r="8" fill="#FFFFFF"/>
+<circle cx="308" cy="284" r="8" fill="#FFFFFF"/>
+<circle cx="342" cy="284" r="8" fill="#FFFFFF"/>
+<circle cx="70" cy="318" r="8" fill="#FFFFFF"/>
+<circle cx="104" cy="318" r="8" fill="#FFFFFF"/>
+<circle cx="138" cy="318" r="8" fill="#FFFFFF"/>
+<circle cx="172" cy="318" r="8" fill="#FFFFFF"/>
+<circle cx="206" cy="318" r="8" fill="#FFFFFF"/>
+<circle cx="240" cy="318" r="8" fill="#FFFFFF"/>
+<circle cx="274" cy="318" r="8" fill="#FFFFFF"/>
+<circle cx="308" cy="318" r="8" fill="#FFFFFF"/>
+<circle cx="342" cy="318" r="8" fill="#FFFFFF"/>
+<circle cx="70" cy="352" r="8" fill="#FFFFFF"/>
+<circle cx="104" cy="352" r="8" fill="#FFFFFF"/>
+<circle cx="138" cy="352" r="8" fill="#FFFFFF"/>
+<circle cx="172" cy="352" r="8" fill="#FFFFFF"/>
+<circle cx="206" cy="352" r="8" fill="#FFFFFF"/>
+<circle cx="240" cy="352" r="8" fill="#FFFFFF"/>
+<circle cx="274" cy="352" r="8" fill="#FFFFFF"/>
+<circle cx="308" cy="352" r="8" fill="#FFFFFF"/>
+<circle cx="342" cy="352" r="8" fill="#FFFFFF"/>
+<circle cx="70" cy="386" r="8" fill="#FFFFFF"/>
+<circle cx="104" cy="386" r="8" fill="#FFFFFF"/>
+<circle cx="138" cy="386" r="8" fill="#FFFFFF"/>
+<circle cx="172" cy="386" r="8" fill="#FFFFFF"/>
+<circle cx="206" cy="386" r="8" fill="#FFFFFF"/>
+<circle cx="240" cy="386" r="8" fill="#FFFFFF"/>
+<circle cx="274" cy="386" r="8" fill="#FFFFFF"/>
+<circle cx="308" cy="386" r="8" fill="#FFFFFF"/>
+<circle cx="342" cy="386" r="8" fill="#FFFFFF"/>
+<circle cx="70" cy="420" r="8" fill="#FFFFFF"/>
+<circle cx="104" cy="420" r="8" fill="#FFFFFF"/>
+<circle cx="138" cy="420" r="8" fill="#FFFFFF"/>
+<circle cx="172" cy="420" r="8" fill="#FFFFFF"/>
+<circle cx="206" cy="420" r="8" fill="#FFFFFF"/>
+<circle cx="240" cy="420" r="8" fill="#FFFFFF"/>
+<circle cx="274" cy="420" r="8" fill="#FFFFFF"/>
+<circle cx="308" cy="420" r="8" fill="#FFFFFF"/>
+<circle cx="342" cy="420" r="8" fill="#FFFFFF"/>
+<circle cx="70" cy="454" r="8" fill="#FFFFFF"/>
+<circle cx="104" cy="454" r="8" fill="#FFFFFF"/>
+<circle cx="138" cy="454" r="8" fill="#FFFFFF"/>
+<circle cx="172" cy="454" r="8" fill="#FFFFFF"/>
+<circle cx="206" cy="454" r="8" fill="#FFFFFF"/>
+<circle cx="240" cy="454" r="8" fill="#FFFFFF"/>
+<circle cx="274" cy="454" r="8" fill="#FFFFFF"/>
+<circle cx="308" cy="454" r="8" fill="#FFFFFF"/>
+<circle cx="342" cy="454" r="8" fill="#FFFFFF"/>
+  </g>
+
+  <g transform="translate(92 186)">
+    <text x="0" y="0" font-size="92" font-weight="800" fill="#FFFFFF" font-family="Arial, 'Microsoft YaHei', sans-serif">需求优先级怎么判断</text>
+  </g>
+
+  <g transform="translate(92 505)">
+    <rect x="0" y="0" width="760" height="82" rx="41" fill="#1769FF"/>
+    <text x="46" y="54" font-size="34" font-weight="700" fill="#FFFFFF" font-family="Arial, 'Microsoft YaHei', sans-serif">产品经理、设计师和运营都能用的判断框架</text>
+  </g>
+
+  <g transform="translate(205 685)">
+    <line x1="0" y1="240" x2="676" y2="240" stroke="#DDEBFF" stroke-width="4" opacity="0.85"/>
+    <line x1="338" y1="0" x2="338" y2="480" stroke="#DDEBFF" stroke-width="4" opacity="0.85"/>
+    <circle cx="338" cy="240" r="80" fill="#1769FF" stroke="#DDEBFF" stroke-width="5"/>
+    <text x="338" y="254" text-anchor="middle" font-size="36" font-weight="800" fill="#FFFFFF" font-family="Arial, 'Microsoft YaHei', sans-serif">METHOD</text>
+
+    <rect x="0" y="0" width="292" height="190" rx="28" fill="#123A83" stroke="#3C82FF" stroke-width="2" opacity="0.92" />
+    <rect x="384" y="0" width="292" height="190" rx="28" fill="#1769FF" stroke="#69A4FF" stroke-width="2" opacity="0.92" />
+    <rect x="0" y="290" width="292" height="190" rx="28" fill="#1B315F" stroke="#6D89B8" stroke-width="2" opacity="0.92" />
+    <rect x="384" y="290" width="292" height="190" rx="28" fill="#38577F" stroke="#AFC7EA" stroke-width="2" opacity="0.82" />
+
+    <text x="146" y="104" text-anchor="middle" font-size="34" font-weight="800" fill="#FFFFFF" font-family="Arial, 'Microsoft YaHei', sans-serif">分类</text>
+    <text x="530" y="104" text-anchor="middle" font-size="34" font-weight="800" fill="#FFFFFF" font-family="Arial, 'Microsoft YaHei', sans-serif">判断</text>
+    <text x="146" y="394" text-anchor="middle" font-size="34" font-weight="800" fill="#FFFFFF" font-family="Arial, 'Microsoft YaHei', sans-serif">排序</text>
+    <text x="530" y="394" text-anchor="middle" font-size="34" font-weight="800" fill="#FFFFFF" font-family="Arial, 'Microsoft YaHei', sans-serif">落地</text>
+  </g>
+
+  <g transform="translate(92 1235)" opacity="0.9">
+    <text x="0" y="0" font-size="30" font-weight="700" fill="#BFD5FF" font-family="Arial, 'Microsoft YaHei', sans-serif">科学分类</text>
+    <text x="230" y="0" font-size="30" font-weight="700" fill="#BFD5FF" font-family="Arial, 'Microsoft YaHei', sans-serif">优先排序</text>
+    <text x="460" y="0" font-size="30" font-weight="700" fill="#BFD5FF" font-family="Arial, 'Microsoft YaHei', sans-serif">提升效率</text>
+    <text x="690" y="0" font-size="30" font-weight="700" fill="#BFD5FF" font-family="Arial, 'Microsoft YaHei', sans-serif">驱动增长</text>
+  </g>
+
+  <text x="92" y="1350" font-size="34" font-weight="800" fill="#FFFFFF" font-family="Arial, 'Microsoft YaHei', sans-serif">初一</text>
+  <text x="92" y="1390" font-size="22" font-weight="500" fill="#BFD5FF" font-family="Arial, 'Microsoft YaHei', sans-serif">设计 · 策略 · 产品</text>
+
+  <rect x="910" y="1332" width="112" height="54" rx="27" fill="#1769FF"/>
+  <text x="966" y="1368" text-anchor="middle" font-size="26" font-weight="800" fill="#FFFFFF" font-family="Arial, 'Microsoft YaHei', sans-serif">1/6</text>
+</svg>

@@ -102,3 +102,14 @@
 - 检查项目不存在旧的根目录 `app/api/social/**` 路由。
 - 确认当前唯一 App Router 路由树位于 `src/app/**`。
 - 确认保留 `src/app/layout.tsx`、`src/app/page.tsx` 和所有 `src/app/api/social/**/route.ts`，避免 Vercel 构建到旧的 `route.js`。
+
+## 2026-05-29 JavaScript graphic package generator
+
+- 新增 `scripts/generate_graphic_content_package.js`，用于半自动图文内容生产，只读取本地 input/template 并写入 output，不依赖 Vercel、OAuth 或小红书/抖音 API。
+- 在 `package.json` 中新增 `generate:graphic` script，执行 `node scripts/generate_graphic_content_package.js`。
+
+## 2026-05-29 provided graphic generator script
+
+- 用用户提供的完整半自动图文内容包生成脚本替换 `scripts/generate_graphic_content_package.js`。
+- 新增默认输入文件 `input/graphic_outline.md`，支持不传参数时直接读取默认大纲。
+- 验证脚本会生成 SVG 页面、图片 prompt、小红书/抖音文案、手动发布清单、发布记录、数据回填模板和预览 HTML。

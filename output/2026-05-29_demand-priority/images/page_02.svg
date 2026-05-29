@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1086" height="1448" viewBox="0 0 1086 1448" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pageBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F8FBFF"/>
+      <stop offset="100%" stop-color="#EAF3FF"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1086" height="1448" fill="url(#pageBg)"/>
+
+  <g opacity="0.26">
+    <circle cx="50" cy="70" r="7" fill="#9EC5FF"/>
+<circle cx="78" cy="70" r="7" fill="#9EC5FF"/>
+<circle cx="106" cy="70" r="7" fill="#9EC5FF"/>
+<circle cx="134" cy="70" r="7" fill="#9EC5FF"/>
+<circle cx="162" cy="70" r="7" fill="#9EC5FF"/>
+<circle cx="190" cy="70" r="7" fill="#9EC5FF"/>
+<circle cx="218" cy="70" r="7" fill="#9EC5FF"/>
+<circle cx="246" cy="70" r="7" fill="#9EC5FF"/>
+<circle cx="274" cy="70" r="7" fill="#9EC5FF"/>
+<circle cx="302" cy="70" r="7" fill="#9EC5FF"/>
+<circle cx="50" cy="98" r="7" fill="#9EC5FF"/>
+<circle cx="78" cy="98" r="7" fill="#9EC5FF"/>
+<circle cx="106" cy="98" r="7" fill="#9EC5FF"/>
+<circle cx="134" cy="98" r="7" fill="#9EC5FF"/>
+<circle cx="162" cy="98" r="7" fill="#9EC5FF"/>
+<circle cx="190" cy="98" r="7" fill="#9EC5FF"/>
+<circle cx="218" cy="98" r="7" fill="#9EC5FF"/>
+<circle cx="246" cy="98" r="7" fill="#9EC5FF"/>
+<circle cx="274" cy="98" r="7" fill="#9EC5FF"/>
+<circle cx="302" cy="98" r="7" fill="#9EC5FF"/>
+<circle cx="50" cy="126" r="7" fill="#9EC5FF"/>
+<circle cx="78" cy="126" r="7" fill="#9EC5FF"/>
+<circle cx="106" cy="126" r="7" fill="#9EC5FF"/>
+<circle cx="134" cy="126" r="7" fill="#9EC5FF"/>
+<circle cx="162" cy="126" r="7" fill="#9EC5FF"/>
+<circle cx="190" cy="126" r="7" fill="#9EC5FF"/>
+<circle cx="218" cy="126" r="7" fill="#9EC5FF"/>
+<circle cx="246" cy="126" r="7" fill="#9EC5FF"/>
+<circle cx="274" cy="126" r="7" fill="#9EC5FF"/>
+<circle cx="302" cy="126" r="7" fill="#9EC5FF"/>
+<circle cx="50" cy="154" r="7" fill="#9EC5FF"/>
+<circle cx="78" cy="154" r="7" fill="#9EC5FF"/>
+<circle cx="106" cy="154" r="7" fill="#9EC5FF"/>
+<circle cx="134" cy="154" r="7" fill="#9EC5FF"/>
+<circle cx="162" cy="154" r="7" fill="#9EC5FF"/>
+<circle cx="190" cy="154" r="7" fill="#9EC5FF"/>
+<circle cx="218" cy="154" r="7" fill="#9EC5FF"/>
+<circle cx="246" cy="154" r="7" fill="#9EC5FF"/>
+<circle cx="274" cy="154" r="7" fill="#9EC5FF"/>
+<circle cx="302" cy="154" r="7" fill="#9EC5FF"/>
+<circle cx="50" cy="182" r="7" fill="#9EC5FF"/>
+<circle cx="78" cy="182" r="7" fill="#9EC5FF"/>
+<circle cx="106" cy="182" r="7" fill="#9EC5FF"/>
+<circle cx="134" cy="182" r="7" fill="#9EC5FF"/>
+<circle cx="162" cy="182" r="7" fill="#9EC5FF"/>
+<circle cx="190" cy="182" r="7" fill="#9EC5FF"/>
+<circle cx="218" cy="182" r="7" fill="#9EC5FF"/>
+<circle cx="246" cy="182" r="7" fill="#9EC5FF"/>
+<circle cx="274" cy="182" r="7" fill="#9EC5FF"/>
+<circle cx="302" cy="182" r="7" fill="#9EC5FF"/>
+<circle cx="50" cy="210" r="7" fill="#9EC5FF"/>
+<circle cx="78" cy="210" r="7" fill="#9EC5FF"/>
+<circle cx="106" cy="210" r="7" fill="#9EC5FF"/>
+<circle cx="134" cy="210" r="7" fill="#9EC5FF"/>
+<circle cx="162" cy="210" r="7" fill="#9EC5FF"/>
+<circle cx="190" cy="210" r="7" fill="#9EC5FF"/>
+<circle cx="218" cy="210" r="7" fill="#9EC5FF"/>
+<circle cx="246" cy="210" r="7" fill="#9EC5FF"/>
+<circle cx="274" cy="210" r="7" fill="#9EC5FF"/>
+<circle cx="302" cy="210" r="7" fill="#9EC5FF"/>
+<circle cx="50" cy="238" r="7" fill="#9EC5FF"/>
+<circle cx="78" cy="238" r="7" fill="#9EC5FF"/>
+<circle cx="106" cy="238" r="7" fill="#9EC5FF"/>
+<circle cx="134" cy="238" r="7" fill="#9EC5FF"/>
+<circle cx="162" cy="238" r="7" fill="#9EC5FF"/>
+<circle cx="190" cy="238" r="7" fill="#9EC5FF"/>
+<circle cx="218" cy="238" r="7" fill="#9EC5FF"/>
+<circle cx="246" cy="238" r="7" fill="#9EC5FF"/>
+<circle cx="274" cy="238" r="7" fill="#9EC5FF"/>
+<circle cx="302" cy="238" r="7" fill="#9EC5FF"/>
+<circle cx="50" cy="266" r="7" fill="#9EC5FF"/>
+<circle cx="78" cy="266" r="7" fill="#9EC5FF"/>
+<circle cx="106" cy="266" r="7" fill="#9EC5FF"/>
+<circle cx="134" cy="266" r="7" fill="#9EC5FF"/>
+<circle cx="162" cy="266" r="7" fill="#9EC5FF"/>
+<circle cx="190" cy="266" r="7" fill="#9EC5FF"/>
+<circle cx="218" cy="266" r="7" fill="#9EC5FF"/>
+<circle cx="246" cy="266" r="7" fill="#9EC5FF"/>
+<circle cx="274" cy="266" r="7" fill="#9EC5FF"/>
+<circle cx="302" cy="266" r="7" fill="#9EC5FF"/>
+<circle cx="50" cy="294" r="7" fill="#9EC5FF"/>
+<circle cx="78" cy="294" r="7" fill="#9EC5FF"/>
+<circle cx="106" cy="294" r="7" fill="#9EC5FF"/>
+<circle cx="134" cy="294" r="7" fill="#9EC5FF"/>
+<circle cx="162" cy="294" r="7" fill="#9EC5FF"/>
+<circle cx="190" cy="294" r="7" fill="#9EC5FF"/>
+<circle cx="218" cy="294" r="7" fill="#9EC5FF"/>
+<circle cx="246" cy="294" r="7" fill="#9EC5FF"/>
+<circle cx="274" cy="294" r="7" fill="#9EC5FF"/>
+<circle cx="302" cy="294" r="7" fill="#9EC5FF"/>
+<circle cx="50" cy="322" r="7" fill="#9EC5FF"/>
+<circle cx="78" cy="322" r="7" fill="#9EC5FF"/>
+<circle cx="106" cy="322" r="7" fill="#9EC5FF"/>
+<circle cx="134" cy="322" r="7" fill="#9EC5FF"/>
+<circle cx="162" cy="322" r="7" fill="#9EC5FF"/>
+<circle cx="190" cy="322" r="7" fill="#9EC5FF"/>
+<circle cx="218" cy="322" r="7" fill="#9EC5FF"/>
+<circle cx="246" cy="322" r="7" fill="#9EC5FF"/>
+<circle cx="274" cy="322" r="7" fill="#9EC5FF"/>
+<circle cx="302" cy="322" r="7" fill="#9EC5FF"/>
+  </g>
+
+  <path d="M870 112 C920 160, 870 210, 936 258 C982 292, 1000 340, 950 386" fill="none" stroke="#7FB2FF" stroke-width="4" stroke-dasharray="12 12" opacity="0.7"/>
+  <circle cx="880" cy="112" r="28" fill="#1769FF" opacity="0.9"/>
+  <rect x="940" y="360" width="20" height="74" rx="8" fill="#1769FF"/>
+  <path d="M960 365 L1014 384 L960 402 Z" fill="#1769FF"/>
+
+  <g transform="translate(76 110)">
+    <rect x="0" y="0" width="30" height="30" transform="rotate(45 15 15)" fill="#1769FF"/>
+    <text x="55" y="38" font-size="70" font-weight="850" fill="#0B1F4D" font-family="Arial, 'Microsoft YaHei', sans-serif">先判断是不是关键问题</text>
+  </g>
+
+  <g transform="translate(76 305)">
+    <rect x="0" y="0" width="320" height="56" rx="28" fill="#1769FF"/>
+    <text x="32" y="37" font-size="28" font-weight="800" fill="#FFFFFF" font-family="Arial, 'Microsoft YaHei', sans-serif">重点解释页</text>
+  </g>
+
+  <g>
+    
+      <rect x="76" y="385" width="934" height="160" rx="26" fill="#FFFFFF" stroke="#BFD5FF" stroke-width="2" opacity="1" />
+      <circle cx="142" cy="465" r="42" fill="#1769FF"/>
+      <text x="142" y="475" text-anchor="middle" font-size="28" font-weight="800" fill="#FFFFFF" font-family="Arial, 'Microsoft YaHei', sans-serif">01</text>
+      <text x="220" y="440" font-size="31" font-weight="650" fill="#111827" font-family="Arial, 'Microsoft YaHei', sans-serif">这个需求解决的是不是当前最重要的问题</text>
+    
+
+      <rect x="76" y="579" width="934" height="160" rx="26" fill="#FFFFFF" stroke="#BFD5FF" stroke-width="2" opacity="1" />
+      <circle cx="142" cy="659" r="42" fill="#1769FF"/>
+      <text x="142" y="669" text-anchor="middle" font-size="28" font-weight="800" fill="#FFFFFF" font-family="Arial, 'Microsoft YaHei', sans-serif">02</text>
+      <text x="220" y="634" font-size="31" font-weight="650" fill="#111827" font-family="Arial, 'Microsoft YaHei', sans-serif">它影响的是少数人抱怨，还是一类用户的核心路径</text>
+    
+
+      <rect x="76" y="773" width="934" height="160" rx="26" fill="#FFFFFF" stroke="#BFD5FF" stroke-width="2" opacity="1" />
+      <circle cx="142" cy="853" r="42" fill="#1769FF"/>
+      <text x="142" y="863" text-anchor="middle" font-size="28" font-weight="800" fill="#FFFFFF" font-family="Arial, 'Microsoft YaHei', sans-serif">03</text>
+      <text x="220" y="828" font-size="31" font-weight="650" fill="#111827" font-family="Arial, 'Microsoft YaHei', sans-serif">如果不做，会不会影响转化、留存或体验信任</text>
+    
+  </g>
+
+  <line x1="100" y1="1348" x2="430" y2="1348" stroke="#2F7DFF" stroke-width="3" opacity="0.65"/>
+  <circle cx="450" cy="1348" r="6" fill="#2F7DFF"/>
+  <text x="543" y="1360" text-anchor="middle" font-size="30" font-weight="800" fill="#0B1F4D" font-family="Arial, 'Microsoft YaHei', sans-serif">初一设计策略</text>
+  <circle cx="636" cy="1348" r="6" fill="#2F7DFF"/>
+  <line x1="656" y1="1348" x2="890" y2="1348" stroke="#2F7DFF" stroke-width="3" opacity="0.65"/>
+  <rect x="910" y="1322" width="112" height="54" rx="27" fill="#1769FF"/>
+  <text x="966" y="1358" text-anchor="middle" font-size="26" font-weight="800" fill="#FFFFFF" font-family="Arial, 'Microsoft YaHei', sans-serif">2/6</text>
+</svg>
