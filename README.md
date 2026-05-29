@@ -193,6 +193,11 @@ SOCIAL_PUBLISH_API_ENABLED=false
 - 如果直接打开 `/api/social/douyin/callback` 或 `/api/social/xiaohongshu/callback` 返回错误，是正常的，因为 callback 需要平台携带 `code` / `state` 参数访问。
 - 如果平台提示 `redirect_uri` 不一致，说明平台后台配置的 redirect URI 和云端 `.env` 中的 `DOUYIN_REDIRECT_URI` / `XHS_REDIRECT_URI` 不一致，请逐字符核对协议、域名、路径和末尾斜杠。
 
+
+### npm install 环境说明
+
+Codex 当前执行环境访问 npm registry 可能返回 `403 Forbidden`，这属于执行环境网络限制，不代表仓库缺少 Next.js 依赖或一定无法部署。请以仓库根目录 `package.json` 为准：其中已经声明 `next`、`react`、`react-dom`、`typescript`、`@types/react`、`@types/node`，Vercel 重新部署时会在自己的构建环境中执行依赖安装和 `npm run build`。
+
 ### 部署后测试 URL
 
 Vercel 部署完成后，请测试以下 URL：
