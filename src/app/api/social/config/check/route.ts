@@ -16,7 +16,7 @@ export async function GET() {
     return Response.json({
       status: 'error',
       code: 'cloud_oauth_config_error',
-      message: error.message,
+      message: error instanceof Error ? error.message : String(error),
     }, { status: 500 });
   }
 }

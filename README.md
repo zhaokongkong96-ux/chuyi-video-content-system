@@ -128,8 +128,9 @@ python scripts/generate_graphic_content_package.py --date 2026-05-29 --slug dema
 - 项目类型：Next.js App Router 应用。
 - Root Directory：仓库根目录，无需额外配置子目录。Vercel 中不要选择 `input/`、`docs/`、`scripts/` 或其他子目录。
 - App Directory：`src/app/`。
-- 首页路由：`src/app/page.js`。
-- Root Layout：`src/app/layout.js`。
+- `package.json` 位于仓库根目录，并声明 `next`、`react`、`react-dom` 依赖。
+- 首页路由：`src/app/page.tsx`。
+- Root Layout：`src/app/layout.tsx`。
 - Build Command：`npm run build`。
 - Start Command：`npm run start`。
 - 必须配置的云端环境变量：`NEXT_PUBLIC_APP_URL`、`DOUYIN_REDIRECT_URI`、`XHS_REDIRECT_URI`、`CONTENT_STORAGE_MODE`、`SOCIAL_PUBLISH_API_ENABLED`。
@@ -140,6 +141,7 @@ python scripts/generate_graphic_content_package.py --date 2026-05-29 --slug dema
   - `/api/social/xiaohongshu/start`
   - `/api/social/xiaohongshu/callback`
   - `/api/social/publish/execute`
+- 关键 route 文件：`src/app/api/social/config/check/route.ts`、`src/app/api/social/douyin/callback/route.ts`、`src/app/api/social/xiaohongshu/callback/route.ts`。
 
 当前 Vercel 真实域名为 `https://chuyi-video-content-system.vercel.app`。请使用该域名更新 `NEXT_PUBLIC_APP_URL`，再生成抖音和小红书 redirect URI。GitHub 只作为代码仓库，不是 OAuth callback 的云端运行服务。
 

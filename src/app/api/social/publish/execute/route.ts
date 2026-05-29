@@ -4,7 +4,7 @@ import publishExecute from '../../../../../social/publishExecute.js';
 const { getOAuthRedirectUris } = oauthConfig;
 const { executePublish } = publishExecute;
 
-export async function POST(request) {
+export async function POST(request: Request) {
   try {
     getOAuthRedirectUris();
     const body = await request.json();
@@ -14,7 +14,7 @@ export async function POST(request) {
     return Response.json({
       status: 'error',
       code: 'cloud_oauth_config_error',
-      message: error.message,
+      message: error instanceof Error ? error.message : String(error),
     }, { status: 500 });
   }
 }

@@ -42,3 +42,9 @@
 - 新增 `/api/social/config/check`，用于部署后检查云端 OAuth 和存储配置。
 - 新增 `/api/social/douyin/start` 与 `/api/social/xiaohongshu/start` 授权入口占位 route，避免部署后访问 OAuth start 返回 404。
 - 更新 README，明确 Vercel Root Directory 应为仓库根目录，App Directory 为 `src/app/`，并列出部署后应测试的真实 URL。
+
+## 2026-05-29 Next.js dependency detection fix
+
+- 将 `next`、`react`、`react-dom` 依赖版本改为 `latest`，确保 Vercel 能从仓库根目录的 `package.json` 检测 Next.js 版本。
+- 将 `src/app` 路由文件改为 Next.js / TypeScript 常用结构：`layout.tsx`、`page.tsx`、`route.ts`。
+- 新增 `tsconfig.json` 和 `next-env.d.ts`，让 Vercel/Next.js 构建 TypeScript App Router 路由时有明确配置。
