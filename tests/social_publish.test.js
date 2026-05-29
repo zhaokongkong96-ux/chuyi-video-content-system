@@ -1,9 +1,9 @@
-import assert from "node:assert/strict";
-import test from "node:test";
+const assert = require("node:assert/strict");
+const test = require("node:test");
 
-import { MockCloudContentStorage, createMockContentPackage, INCOMPLETE_MOCK_TOPIC } from "../src/social/contentStorage.js";
-import { getOAuthRedirectUris } from "../src/social/oauthConfig.js";
-import { executePublish } from "../src/social/publishExecute.js";
+const { MockCloudContentStorage, createMockContentPackage, INCOMPLETE_MOCK_TOPIC } = require("../src/social/contentStorage");
+const { getOAuthRedirectUris } = require("../src/social/oauthConfig");
+const { executePublish } = require("../src/social/publishExecute");
 
 test("confirmed=false is rejected", async () => {
   const result = await executePublish({ topic: "cloud-ready-demo", confirmed: false }, {

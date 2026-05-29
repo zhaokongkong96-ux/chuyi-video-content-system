@@ -120,38 +120,12 @@ python scripts/generate_graphic_content_package.py --date 2026-05-29 --slug dema
 
 当前项目按云端运行设计，不使用 `localhost` 作为 OAuth 或发布流程地址，也不假设本地持久化文件系统或固定 `/content` 目录一定可用。社媒发布相关代码通过存储适配层读取内容包和保存发布记录。
 
-
-### Vercel 部署检查
-
-当前仓库已按 Vercel 的 Next.js 项目形态补齐基础结构：
-
-- 项目类型：Next.js App Router 应用。
-- Root Directory：仓库根目录，无需额外配置子目录。Vercel 中不要选择 `input/`、`docs/`、`scripts/` 或其他子目录。
-- App Directory：`src/app/`。
-- `package.json` 位于仓库根目录，并声明 `next`、`react`、`react-dom` 依赖。
-- 模块格式：项目使用 ESM（`package.json` 中为 `"type": "module"`），`src/app/api/**/route.ts` 和 `src/social/*` 均使用 `import` / `export`，避免 App Router route 与 CommonJS 冲突。
-- 首页路由：`src/app/page.tsx`。
-- Root Layout：`src/app/layout.tsx`。
-- Build Command：`npm run build`。
-- Start Command：`npm run start`。
-- 必须配置的云端环境变量：`NEXT_PUBLIC_APP_URL`、`DOUYIN_REDIRECT_URI`、`XHS_REDIRECT_URI`、`CONTENT_STORAGE_MODE`、`SOCIAL_PUBLISH_API_ENABLED`。
-- 已提供 API Route Handler：
-  - `/api/social/config/check`
-  - `/api/social/douyin/start`
-  - `/api/social/douyin/callback`
-  - `/api/social/xiaohongshu/start`
-  - `/api/social/xiaohongshu/callback`
-  - `/api/social/publish/execute`
-- 关键 route 文件：`src/app/api/social/config/check/route.ts`、`src/app/api/social/douyin/callback/route.ts`、`src/app/api/social/xiaohongshu/callback/route.ts`。
-
-当前 Vercel 真实域名为 `https://chuyi-video-content-system.vercel.app`。请使用该域名更新 `NEXT_PUBLIC_APP_URL`，再生成抖音和小红书 redirect URI。GitHub 只作为代码仓库，不是 OAuth callback 的云端运行服务。
-
 ### 云端环境变量
 
 ```bash
-NEXT_PUBLIC_APP_URL=https://chuyi-video-content-system.vercel.app
-DOUYIN_REDIRECT_URI=https://chuyi-video-content-system.vercel.app/api/social/douyin/callback
-XHS_REDIRECT_URI=https://chuyi-video-content-system.vercel.app/api/social/xiaohongshu/callback
+NEXT_PUBLIC_APP_URL=https://<YOUR_CLOUD_DOMAIN>
+DOUYIN_REDIRECT_URI=https://<YOUR_CLOUD_DOMAIN>/api/social/douyin/callback
+XHS_REDIRECT_URI=https://<YOUR_CLOUD_DOMAIN>/api/social/xiaohongshu/callback
 CONTENT_STORAGE_MODE=cloud
 SOCIAL_PUBLISH_API_ENABLED=false
 ```
@@ -159,7 +133,7 @@ SOCIAL_PUBLISH_API_ENABLED=false
 说明：
 
 - `NEXT_PUBLIC_APP_URL`：云端公开访问域名，不能是 `localhost`、`127.0.0.1` 或 `[::1]`。
-- 当前 Vercel 真实公网域名是 `https://chuyi-video-content-system.vercel.app`；如果未来更换项目或自定义域名，需要同步更新这里的三个 URL。
+- `<YOUR_CLOUD_DOMAIN>` 必须替换成当前云端项目的真实公网域名，例如 Vercel / Netlify / Railway / Render 提供的正式访问域名。
 - `DOUYIN_REDIRECT_URI`：本项目提供给抖音平台回调的 OAuth callback 接口地址，建议为 `${NEXT_PUBLIC_APP_URL}/api/social/douyin/callback`。
 - `XHS_REDIRECT_URI`：本项目提供给小红书平台回调的 OAuth callback 接口地址，建议为 `${NEXT_PUBLIC_APP_URL}/api/social/xiaohongshu/callback`。
 - `CONTENT_STORAGE_MODE`：`cloud` 为正式云端模式，当前提供 mock 实现；`filesystem` 仅用于开发 / 临时测试。
@@ -169,21 +143,21 @@ SOCIAL_PUBLISH_API_ENABLED=false
 
 请在小红书 / 抖音开放平台后台，将 redirect URI 配置为本项目的云端 callback 接口地址：
 
-- 抖音：`https://chuyi-video-content-system.vercel.app/api/social/douyin/callback`
-- 小红书：`https://chuyi-video-content-system.vercel.app/api/social/xiaohongshu/callback`
+- 抖音：`https://<YOUR_CLOUD_DOMAIN>/api/social/douyin/callback`
+- 小红书：`https://<YOUR_CLOUD_DOMAIN>/api/social/xiaohongshu/callback`
 
 注意：
 
 - callback URL 不是抖音 / 小红书后台地址，而是本项目提供给平台 OAuth 回调的接口地址。
 - 用户不能通过直接打开 callback URL 完成平台配置；它需要由平台在授权完成后携带 `code` / `state` 参数访问。
-- 当前应使用 Vercel 已生成的真实公网域名：`https://chuyi-video-content-system.vercel.app`。
+- `<YOUR_CLOUD_DOMAIN>` 必须替换成当前云端项目的真实公网域名，例如 Vercel / Netlify / Railway / Render 的正式访问域名。
 - 如果系统检测到 redirect URI 使用 `localhost`，会直接报错并提示改成云端公开地址。
 
 操作步骤：
 
-1. 找到当前云端项目的真实公网域名，本项目当前为 `https://chuyi-video-content-system.vercel.app`。
-2. 在云端环境变量中配置 `NEXT_PUBLIC_APP_URL=https://chuyi-video-content-system.vercel.app`。
-3. 基于 `NEXT_PUBLIC_APP_URL` 生成 `DOUYIN_REDIRECT_URI=https://chuyi-video-content-system.vercel.app/api/social/douyin/callback` 和 `XHS_REDIRECT_URI=https://chuyi-video-content-system.vercel.app/api/social/xiaohongshu/callback`。
+1. 找到当前云端项目的真实公网域名，例如 Vercel / Netlify / Railway / Render 部署后提供的正式访问域名。
+2. 在云端环境变量中配置 `NEXT_PUBLIC_APP_URL=https://<YOUR_CLOUD_DOMAIN>`。
+3. 基于 `NEXT_PUBLIC_APP_URL` 生成 `DOUYIN_REDIRECT_URI=https://<YOUR_CLOUD_DOMAIN>/api/social/douyin/callback` 和 `XHS_REDIRECT_URI=https://<YOUR_CLOUD_DOMAIN>/api/social/xiaohongshu/callback`。
 4. 登录抖音开放平台 / 小红书开放平台。
 5. 进入对应应用的 OAuth、授权回调或安全设置页面。
 6. 将对应平台的 redirect URI 填入平台后台，并确保它与云端 `.env` 环境变量完全一致。
@@ -191,25 +165,9 @@ SOCIAL_PUBLISH_API_ENABLED=false
 
 常见错误说明：
 
+- 如果访问 `your-cloud-domain.example.com` 打不开，是因为它只是示例占位符，不是真实域名；请改用当前云端项目的真实公网域名。
 - 如果直接打开 `/api/social/douyin/callback` 或 `/api/social/xiaohongshu/callback` 返回错误，是正常的，因为 callback 需要平台携带 `code` / `state` 参数访问。
 - 如果平台提示 `redirect_uri` 不一致，说明平台后台配置的 redirect URI 和云端 `.env` 中的 `DOUYIN_REDIRECT_URI` / `XHS_REDIRECT_URI` 不一致，请逐字符核对协议、域名、路径和末尾斜杠。
-
-
-### npm install 环境说明
-
-Codex 当前执行环境访问 npm registry 可能返回 `403 Forbidden`，这属于执行环境网络限制，不代表仓库缺少 Next.js 依赖或一定无法部署。请以仓库根目录 `package.json` 为准：其中已经声明 `next`、`react`、`react-dom`、`typescript`、`@types/react`、`@types/node`，并且模块格式已统一为 ESM。Vercel 重新部署时会在自己的构建环境中执行依赖安装和 `npm run build`。
-
-### 部署后测试 URL
-
-Vercel 部署完成后，请测试以下 URL：
-
-- 首页：`https://chuyi-video-content-system.vercel.app/`
-- 配置检查：`https://chuyi-video-content-system.vercel.app/api/social/config/check`
-- 抖音授权入口占位：`https://chuyi-video-content-system.vercel.app/api/social/douyin/start`
-- 小红书授权入口占位：`https://chuyi-video-content-system.vercel.app/api/social/xiaohongshu/start`
-- 抖音 callback：`https://chuyi-video-content-system.vercel.app/api/social/douyin/callback`（直接打开缺少 `code` / `state` 返回 400 属于正常现象）
-- 小红书 callback：`https://chuyi-video-content-system.vercel.app/api/social/xiaohongshu/callback`（直接打开缺少 `code` / `state` 返回 400 属于正常现象）
-- 发布执行：`POST https://chuyi-video-content-system.vercel.app/api/social/publish/execute`
 
 ### 半自动发布模式
 

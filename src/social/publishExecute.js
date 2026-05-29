@@ -1,19 +1,19 @@
-import { createContentStorage, isPublicHttpUrl } from "./contentStorage.js";
-import { createAnalyticsSnapshotTemplate, createManualPublishGuide } from "./manualPublishGuide.js";
-import { createPublishRecordStorage } from "./publishRecordStorage.js";
+const { createContentStorage, isPublicHttpUrl } = require("./contentStorage");
+const { createAnalyticsSnapshotTemplate, createManualPublishGuide } = require("./manualPublishGuide");
+const { createPublishRecordStorage } = require("./publishRecordStorage");
 
 function response(statusCode, body) {
   return { statusCode, body };
 }
 
-export function getPageCount(pageScript) {
+function getPageCount(pageScript) {
   if (Array.isArray(pageScript)) return pageScript.length;
   if (Array.isArray(pageScript?.content_pages)) return pageScript.content_pages.length;
   if (Array.isArray(pageScript?.pages)) return pageScript.pages.length;
   return 0;
 }
 
-export function validateContentPackage(topic, contentPackage) {
+function validateContentPackage(topic, contentPackage) {
   const missing = [];
   if (!topic) missing.push("topic");
   if (!contentPackage) {
@@ -45,7 +45,7 @@ export function validateContentPackage(topic, contentPackage) {
   };
 }
 
-export async function executePublish(requestBody, options = {}) {
+async function executePublish(requestBody, options = {}) {
   if (requestBody?.confirmed !== true) {
     return response(400, {
       status: "error",
@@ -132,3 +132,9 @@ export async function executePublish(requestBody, options = {}) {
     next_step: "请手动下载/上传图片，并复制文案发布",
   });
 }
+
+module.exports = {
+  executePublish,
+  getPageCount,
+  validateContentPackage,
+};
