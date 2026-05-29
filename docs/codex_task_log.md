@@ -62,3 +62,11 @@
 - 确认 `package.json` 已移除 `type: commonjs` 并使用 ESM，保留 Next.js 依赖与 `dev` / `build` / `start` 脚本。
 - 确认 `src/app` 路由结构、OAuth callback、config check 和 publish execute route 均保留。
 - 确认 `src/social/*` 与测试均使用 ESM import/export，避免 App Router route 与 CommonJS 冲突。
+
+## 2026-05-29 GitHub PR conflict resolution pass
+
+- 以当前 PR 代码为基线重新检查 GitHub 标记的冲突文件：README、任务日志、package.json、`src/social/*` 和测试文件均未残留 conflict markers。
+- 确认 `package.json` 不包含 `type: commonjs`，当前统一为 ESM，并保留 Next.js / TypeScript 构建依赖与 `dev`、`build`、`start` 脚本。
+- 确认 `src/app/api/social/**/route.ts` 使用 App Router 标准 ESM `export async function GET/POST` 写法。
+- 确认被 route.ts 引用的 `src/social/*.js` 已统一为 ESM import/export，避免 CommonJS 与 Turbopack 构建冲突。
+- 确认 README 保留 Vercel 部署、真实云端域名、OAuth callback、半自动发布、npm registry 403 环境限制和 Vercel 构建验证说明。
