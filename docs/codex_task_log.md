@@ -77,3 +77,10 @@
 - 确认 `package.json` 未使用 `type: commonjs`，当前为 ESM。
 - 确认 Next.js、React 和 TypeScript 相关依赖仍保留。
 - 确认 `src/app/layout.tsx`、`src/app/page.tsx` 和 `src/app/api/social/config/check/route.ts` 仍存在。
+
+## 2026-05-29 Vercel checklist final pass
+
+- 按 Vercel 部署检查表补齐 `@types/react-dom` 开发依赖。
+- 再次确认 `package.json` 包含 `dev`、`build`、`start`、`test` scripts，且不包含 `type: commonjs`。
+- 再次确认 `src/app/layout.tsx`、`src/app/page.tsx`、`src/app/api/social/config/check/route.ts` 存在。
+- 再次确认 `src/app/api/**/route.ts` 和 `src/social/*.js` 未使用 CommonJS 写法。

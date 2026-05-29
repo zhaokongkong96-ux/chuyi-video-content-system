@@ -128,7 +128,7 @@ python scripts/generate_graphic_content_package.py --date 2026-05-29 --slug dema
 - 项目类型：Next.js App Router 应用。
 - Root Directory：仓库根目录，无需额外配置子目录。Vercel 中不要选择 `input/`、`docs/`、`scripts/` 或其他子目录。
 - App Directory：`src/app/`。
-- `package.json` 位于仓库根目录，并声明 `next`、`react`、`react-dom` 依赖。
+- `package.json` 位于仓库根目录，并声明 `next`、`react`、`react-dom` 依赖，以及 `typescript`、`@types/node`、`@types/react`、`@types/react-dom` 开发依赖。
 - 模块格式：项目使用 ESM（`package.json` 中为 `"type": "module"`），`src/app/api/**/route.ts` 和 `src/social/*` 均使用 `import` / `export`，避免 App Router route 与 CommonJS 冲突。
 - 首页路由：`src/app/page.tsx`。
 - Root Layout：`src/app/layout.tsx`。
@@ -152,12 +152,6 @@ python scripts/generate_graphic_content_package.py --date 2026-05-29 --slug dema
 NEXT_PUBLIC_APP_URL=https://chuyi-video-content-system.vercel.app
 DOUYIN_REDIRECT_URI=https://chuyi-video-content-system.vercel.app/api/social/douyin/callback
 XHS_REDIRECT_URI=https://chuyi-video-content-system.vercel.app/api/social/xiaohongshu/callback
-### 云端环境变量
-
-```bash
-NEXT_PUBLIC_APP_URL=https://<YOUR_CLOUD_DOMAIN>
-DOUYIN_REDIRECT_URI=https://<YOUR_CLOUD_DOMAIN>/api/social/douyin/callback
-XHS_REDIRECT_URI=https://<YOUR_CLOUD_DOMAIN>/api/social/xiaohongshu/callback
 CONTENT_STORAGE_MODE=cloud
 SOCIAL_PUBLISH_API_ENABLED=false
 ```
@@ -166,7 +160,6 @@ SOCIAL_PUBLISH_API_ENABLED=false
 
 - `NEXT_PUBLIC_APP_URL`：云端公开访问域名，不能是 `localhost`、`127.0.0.1` 或 `[::1]`。
 - 当前 Vercel 真实公网域名是 `https://chuyi-video-content-system.vercel.app`；如果未来更换项目或自定义域名，需要同步更新这里的三个 URL。
-- `<YOUR_CLOUD_DOMAIN>` 必须替换成当前云端项目的真实公网域名，例如 Vercel / Netlify / Railway / Render 提供的正式访问域名。
 - `DOUYIN_REDIRECT_URI`：本项目提供给抖音平台回调的 OAuth callback 接口地址，建议为 `${NEXT_PUBLIC_APP_URL}/api/social/douyin/callback`。
 - `XHS_REDIRECT_URI`：本项目提供给小红书平台回调的 OAuth callback 接口地址，建议为 `${NEXT_PUBLIC_APP_URL}/api/social/xiaohongshu/callback`。
 - `CONTENT_STORAGE_MODE`：`cloud` 为正式云端模式，当前提供 mock 实现；`filesystem` 仅用于开发 / 临时测试。
@@ -204,7 +197,7 @@ SOCIAL_PUBLISH_API_ENABLED=false
 
 ### npm install 环境说明
 
-Codex 当前执行环境访问 npm registry 可能返回 `403 Forbidden`，这属于执行环境网络限制，不代表仓库缺少 Next.js 依赖或一定无法部署。请以仓库根目录 `package.json` 为准：其中已经声明 `next`、`react`、`react-dom`、`typescript`、`@types/react`、`@types/node`，并且模块格式已统一为 ESM。Vercel 重新部署时会在自己的构建环境中执行依赖安装和 `npm run build`。
+Codex 当前执行环境访问 npm registry 可能返回 `403 Forbidden`，这属于执行环境网络限制，不代表仓库缺少 Next.js 依赖或一定无法部署。请以仓库根目录 `package.json` 为准：其中已经声明 `next`、`react`、`react-dom`、`typescript`、`@types/node`、`@types/react`、`@types/react-dom`，并且模块格式已统一为 ESM。Vercel 重新部署时会在自己的构建环境中执行依赖安装和 `npm run build`。
 
 ### 部署后测试 URL
 
