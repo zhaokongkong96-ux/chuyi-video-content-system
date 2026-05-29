@@ -55,3 +55,10 @@
 - 将 `src/social/*` 从 `require` / `module.exports` 改为 `import` / `export`。
 - 将 `src/app/api/social/**/route.ts` 改为直接使用命名 ESM import。
 - 将 Node 测试改为 ESM import，保持测试与运行时代码模块格式一致。
+
+## 2026-05-29 Conflict resolution verification
+
+- 检查冲突文件未残留 Git conflict markers。
+- 确认 `package.json` 已移除 `type: commonjs` 并使用 ESM，保留 Next.js 依赖与 `dev` / `build` / `start` 脚本。
+- 确认 `src/app` 路由结构、OAuth callback、config check 和 publish execute route 均保留。
+- 确认 `src/social/*` 与测试均使用 ESM import/export，避免 App Router route 与 CommonJS 冲突。
